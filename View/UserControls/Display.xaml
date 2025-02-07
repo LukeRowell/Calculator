@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Calculator.View.UserControls.Display"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Calculator.View.UserControls" 
+             xmlns:viewmodel="clr-namespace:Calculator.ViewModel" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}">
+    <UserControl.Resources>
+        <Style x:Key="DisplayButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#3b3b3b"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#202020">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="20"/>
+            <RowDefinition Height="20*" MinHeight="35"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*" MinWidth="100"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" FontSize="18" Foreground="LightGray" Style="{StaticResource DisplayButton}" 
+                    Width="45" Height="35"
+                    HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                ☰
+            </Button>
+            <Viewbox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" Width="80">
+                <TextBlock Grid.Column="1" FontSize="16" FontWeight="DemiBold"
+                       Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Standard
+                </TextBlock>
+            </Viewbox>
+            <Button Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{StaticResource DisplayButton}" />
+            <Button Grid.Column="3" Width="35" Height="35" Style="{StaticResource DisplayButton}" 
+                    VerticalContentAlignment="Center" HorizontalAlignment="Right"
+                    BorderThickness="0" Margin="0,0,10,0"  Command="{Binding ShowHistoryCommand}">
+                <Image Source="\Images\history.png" Width="20" Height="20" 
+                       VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality"/>
+            </Button>
+        </Grid>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center"
+                   Foreground="LightGray" Margin="0,0,15,65" Text="{Binding CurrentExpression}">
+        </TextBlock>
+        <Viewbox Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Stretch="Uniform" 
+                Width="300" Height="70" MaxWidth="280" Margin="15">
+            <TextBox VerticalAlignment="Bottom" Background="Transparent"
+                FontWeight="DemiBold" Foreground="#FFFFFF" FontStretch="Normal"
+                Text="{Binding DisplayValue}" BorderThickness="0">
+            </TextBox>
+        </Viewbox>
+    </Grid>
+</UserControl>

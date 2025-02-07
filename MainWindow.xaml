@@ -1,0 +1,30 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        xmlns:userControls="clr-namespace:Calculator.View.UserControls" xmlns:viewmodel="clr-namespace:Calculator.ViewModel" 
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
+        mc:Ignorable="d" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="Calculator" Height="520" Width="320" MinHeight="500" MinWidth="320"
+        Icon="Images\calculator.ico" x:Name="WindowName">
+    <Border CornerRadius="9" BorderBrush="#3B3B3B" BorderThickness="1" Padding="0">
+        <Border CornerRadius="5" BorderBrush="#202020" BorderThickness="5" Padding="0">
+            <Grid Background="#202020">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+                <userControls:TitleBar Grid.Row="0" />
+                <userControls:Display Grid.Row="1" />
+                <userControls:MemoryPanel Grid.Row="2" />
+                <userControls:ButtonPanel Grid.Row="3" />
+                <userControls:MemoryValueListPanel Grid.Row="3" />
+                <userControls:HistoryListPanel Grid.Row="3" />
+            </Grid>
+        </Border>
+    </Border>
+</Window>
