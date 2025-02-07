@@ -28,8 +28,11 @@ namespace Calculator.ViewModel
         public RelayCommand ShowHistoryCommand => new(execute => ShowHistoryItems());
         public RelayCommand ClearHistoryCommand => new(execute => ClearHistory());
 
+        public RelayCommand ShowModeCommand => new(execute => ShowModeItems());
+
         private bool showListView = false;
         private bool showHistory = false;
+        private bool showMode = false;
 
         public bool ShowHistory
         {
@@ -41,6 +44,12 @@ namespace Calculator.ViewModel
         {
             get { return showListView; }
             set { showListView = value; OnPropertyChanged(); }
+        }
+
+        public bool ShowMode
+        {
+            get { return showMode; }
+            set { showMode = value; OnPropertyChanged(); }
         }
 
         private double displayValue = 0;
@@ -285,6 +294,11 @@ namespace Calculator.ViewModel
         private void ClearHistory()
         {
             History.Clear();
+        }
+
+        private void ShowModeItems()
+        {
+            ShowMode = !ShowMode;
         }
     }
 }

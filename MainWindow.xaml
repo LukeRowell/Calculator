@@ -22,7 +22,8 @@
                 <userControls:Display Grid.Row="1" />
                 <userControls:MemoryPanel Grid.Row="2" />
                 <userControls:ButtonPanel Grid.Row="3" />
-                <userControls:MemoryValueListPanel Grid.Row="3" />
+                <userControls:ModePanel Grid.Row="1" Grid.RowSpan="4" Width="250" HorizontalAlignment="Left"/>
+                <userControls:MemoryValueListPanel Grid.Row="3"/>
                 <userControls:HistoryListPanel Grid.Row="3" />
             </Grid>
         </Border>
