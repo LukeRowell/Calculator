@@ -52,10 +52,10 @@
                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding ShowModeCommand}">
                 ☰
             </Button>
-            <Viewbox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" Width="80">
+            <Viewbox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" Width="auto">
                 <TextBlock Grid.Column="1" FontSize="16" FontWeight="DemiBold"
-                       Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Standard
+                       Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Text="{Binding ModeValue}">
                 </TextBlock>
             </Viewbox>
             <Button Grid.Column="2" Background="Transparent" BorderThickness="0" Style="{StaticResource DisplayButton}" />

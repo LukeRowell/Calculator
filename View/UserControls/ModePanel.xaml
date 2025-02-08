@@ -304,27 +304,37 @@
                 </TextBlock>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Standard
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Scientific
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Graphing
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Programmer
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Date calculation
                 </Button>
             </ListViewItem>
@@ -335,67 +345,93 @@
                 </TextBlock>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Currency
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Volume
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Length
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Weight and mass
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Temperature
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Energy
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Area
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Speed
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Time
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Power
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Data
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}"
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Pressure
                 </Button>
             </ListViewItem>
             <ListViewItem>
-                <Button Style="{StaticResource ModeButton}">
+                <Button Style="{StaticResource ModeButton}" 
+                        Command="{Binding ChangeCommand}" 
+                        CommandParameter="{Binding Content, RelativeSource={RelativeSource Mode=Self}}">
                     Angle
                 </Button>
             </ListViewItem>

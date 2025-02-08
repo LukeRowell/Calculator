@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using Calculator.Model;
 using Calculator.MVVM;
 
@@ -29,6 +30,7 @@ namespace Calculator.ViewModel
         public RelayCommand ClearHistoryCommand => new(execute => ClearHistory());
 
         public RelayCommand ShowModeCommand => new(execute => ShowModeItems());
+        public RelayCommand ChangeCommand => new(obj => ChangeMode(obj!));
 
         private bool showListView = false;
         private bool showHistory = false;
@@ -53,6 +55,7 @@ namespace Calculator.ViewModel
         }
 
         private double displayValue = 0;
+        private string modeValue = "Standard";
         private string binaryOperator;
         private double storedDisplayValue = 0;
         private bool concat = false;
@@ -90,6 +93,16 @@ namespace Calculator.ViewModel
             set
             {
                 displayValue = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ModeValue
+        {
+            get { return modeValue; }
+            set
+            {
+                modeValue = value;
                 OnPropertyChanged();
             }
         }
@@ -298,6 +311,12 @@ namespace Calculator.ViewModel
 
         private void ShowModeItems()
         {
+            ShowMode = !ShowMode;
+        }
+
+        private void ChangeMode(object obj)
+        {
+            ModeValue = obj.ToString();
             ShowMode = !ShowMode;
         }
     }
